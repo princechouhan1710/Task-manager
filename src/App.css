@@ -13,3 +13,66 @@ color: rgb(60, 105, 192);
 .bblue{
       background: #3368c0
 }
+.hh{
+  height: 100vh;
+}
+.color{
+  background: #6366f1;
+}
+.wh{
+  height: 300px;
+  width: 250px;
+}
+.ww{
+  width: 100vw;
+}
+
+.cardd{
+  width: 270px;
+    height: 330px;
+    border: none;
+    border-radius: 8px;
+    /* margin: 20px; */
+    box-shadow: 0 0 10px #000;
+}
+.inner{
+  width: 240px;
+    height: 100px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px;
+    border-radius: 8px;
+    background: #bbf7d0;
+    position: relative;
+}
+.inner p {
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+button {
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    text-align: center;
+    background: #bbf7d0;
+    color: #166534;
+    font-weight: 700;
+}
+.box1{
+      width: 300px;
+    height: 150px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #000;
+    padding: 20px;
+}
+   .h2{
+          text-align: center;
+    width: 40px;
+    background: #00f;
+    border-radius: 50%;
+    color: #fff;
+    }

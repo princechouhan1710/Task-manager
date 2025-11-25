@@ -3,7 +3,7 @@ import React from 'react'
 function Home() {
   return (
     <div className=''>
-      <div className=" m-5 d-flex " >
+      <div className=" m-5 d-flex justify-content-between gap-5 " >
         <div className='w-50  p-5' data-aos="fade-right" data-aos-duration="5000">
         <h1 className='cblue ' style={{fontFamily:"Pacifico" ,
         }}>Task Manager</h1>
@@ -16,7 +16,7 @@ priorities, track progress, and meet deadlines seamlessly.</p>
 <button className="btn btn-primary">Get Started</button>
       </div>
       <div className='w-50 p-5'  data-aos="fade-left" data-aos-duration="5000">
-      <img width={"100%"} src="https://task-apps-client.vercel.app/assets/Hero-Dq9GjtoB.png" alt="" />
+      <img width={"75%"} src="https://task-apps-client.vercel.app/assets/Hero-Dq9GjtoB.png" alt="" />
       
       </div>
       </div>
@@ -49,7 +49,7 @@ Add tasks with just a few clicks, assign deadlines, set
 priorities, and track progress in real time.</h4>
       </div>
       <div className='w-50 p-5 '  data-aos="fade-left" data-aos-duration="5000">
-      <img width={"100%"} height={"400px"} src="https://task-apps-client.vercel.app/assets/Add-CJ7-u2yK.png" alt="" />
+      <img width={"75%"} height={"300px"} src="https://task-apps-client.vercel.app/assets/Add-CJ7-u2yK.png" alt="" />
       
       </div>
       </div>
@@ -68,7 +68,7 @@ one organized view.</h4>
       </div>
      
       </div>
-      <div className=" m-5 d-flex justify-content-center align-items-center">
+      <div className=" m-5 d-flex justify-content-between align-items-center">
         <div className='w-50  p-5' data-aos="fade-right" data-aos-duration="5000">
        
         <h2 className='cblue'>Check Tasks with
@@ -79,13 +79,13 @@ Track progress effortlessly by marking completed tasks
 and reviewing pending ones..</h4>
       </div>
       <div className='w-50 p-5 '  data-aos="fade-left" data-aos-duration="5000">
-      <img width={"100%"} height={"400px"} src="https://task-apps-client.vercel.app/assets/Check-CeHOafp9.png" alt="" />
+      <img width={"75%"} height={"300px"} src="https://task-apps-client.vercel.app/assets/Check-CeHOafp9.png" alt="" />
       
       </div>
       </div>
        <div className=" m-5 d-flex justify-content-center align-items-center">
              <div className='w-50 text-center m-auto p-5' data-aos="fade-right" data-aos-duration="5000" >
-      <img width={"100%"} height={"400px"} src="https://task-apps-client.vercel.app/assets/Delete-DrilGtWo.png" alt="" />
+      <img width={"75%"} height={"300px"} src="https://task-apps-client.vercel.app/assets/Delete-DrilGtWo.png" alt="" />
       
       </div>
         <div className='w-50  p-5'  data-aos="fade-left" data-aos-duration="5000">
@@ -109,7 +109,7 @@ Keep your most important tasks front and center by
 pinning them to the top.</h4>
       </div>
       <div className='w-50 p-5 '  data-aos="fade-left" data-aos-duration="5000">
-      <img width={"100%"} height={"400px"} src="https://task-apps-client.vercel.app/assets/Pin-BlR10jqK.png" alt="" />
+      <img width={"75%"} height={"300px"} src="https://task-apps-client.vercel.app/assets/Pin-BlR10jqK.png" alt="" />
       
       </div>
       </div>
