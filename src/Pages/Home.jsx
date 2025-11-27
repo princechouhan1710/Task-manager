@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div className=''>
+    <div className='overflow-hidden'>
       <div className=" m-5 d-flex justify-content-between gap-5 " >
         <div className='w-50  p-5' data-aos="fade-right" data-aos-duration="5000">
         <h1 className='cblue ' style={{fontFamily:"Pacifico" ,
