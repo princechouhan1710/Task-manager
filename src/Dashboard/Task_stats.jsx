@@ -1,71 +1,71 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect, useState } from "react";
 
-function Task_stats() {
-    document.title = "Task Stats";
+function TaskStats() {
+  document.title = "Task Stats";
 
-  const dispatch = useDispatch();
+  const [tasks, setTasks] = useState([]);
 
-  const { products: data } = useSelector((state) => state.productReducer);
+  useEffect(() => {
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) setTasks(JSON.parse(storedTasks));
+  }, []);
 
- const completed = data?.filter(
-    (item) => item.Status?.toLowerCase() === "complete"
-  );
-    const Pending = data?.filter(
-        (item) => item.Status?.toLowerCase() === "pending"
-    );
-   const Progress = data?.filter(
-    (item) => item.Status?.toLowerCase() === "progress"
-  );
-   const Depolyed = data?.filter(
-    (item) => item.Status?.toLowerCase() === "deployed"
-  );
-   const Deferred = data?.filter(
-    (item) => item.Status?.toLowerCase() === "deferred"
-  );
+  const completed = tasks.filter((item) => item.Status?.toLowerCase() === "complete");
+  const pending = tasks.filter((item) => item.Status?.toLowerCase() === "pending");
+  const progress = tasks.filter((item) => item.Status?.toLowerCase() === "progress");
+  const deployed = tasks.filter((item) => item.Status?.toLowerCase() === "deployed");
+  const deferred = tasks.filter((item) => item.Status?.toLowerCase() === "deferred");
+
+  const stats = [
+    { title: "Total Tasks", count: tasks.length, color: "#0D6EFD", initial: "T" },
+    { title: "Pending Tasks", count: pending.length, color: "#FFC107", initial: "P" },
+    { title: "Progress Tasks", count: progress.length, color: "#17A2B8", initial: "P" },
+    { title: "Completed Tasks", count: completed.length, color: "#28A745", initial: "C" },
+    { title: "Deployed Tasks", count: deployed.length, color: "#0DCAF0", initial: "D" },
+    { title: "Deferred Tasks", count: deferred.length, color: "#DC3545", initial: "D" },
+  ];
+
   return (
-    <div className="ww">
-            <h1 className=' m-auto text-center p-3'>Tast stats</h1>
-            <div className="d-flex flex-rowcard flex-wrap  justify-content-center gap-5">
-                <div className="box1 ">
-                    <h5>Total Task</h5>
-                   <div className="d-flex justify-content-between"> <h5 className="p-2">{data.length}</h5> <h2 className="h2">T</h2></div>
-                    <p>110 last month</p>
-                </div>
-                  
-                <div className="box1 ">
-                    <h5>Pending Task</h5>
-                   <div className="d-flex justify-content-between"> <h5 className="p-2">{Pending.length}</h5> <h2 className="h2" style={{ background: "rgb(15, 118, 110)"}}>P</h2></div>
-                    <p>110 last month</p>
-                </div>
-                <div className="box1 ">
-                    <h5>Progress Task</h5>
-                   <div className="d-flex justify-content-between"> <h5 className="p-2">{Progress.length}</h5> <h2 className="h2" style={{ background: "rgb(245, 158, 11)"}}>P</h2></div>
-                    <p>110 last month</p>
-                </div>
-                <div className="box1 ">
-                    <h5>Complete Task</h5>
-                   <div className="d-flex justify-content-between"> <h5 className="p-2">{completed.length}</h5> <h2 className="h2" style={{ background: "rgb(190, 24, 93)"}}>C</h2></div>
-                    <p>110 last month</p>
-                </div>
-                <div className="box1 ">
-                    <h5>Depolyed Task</h5>
-                   <div className="d-flex justify-content-between"> <h5 className="p-2">{Depolyed.length}</h5> <h2 className="h2" style={{ background: "rgb(245, 158, 11)"}}>D</h2></div>
-                    <p>110 last month</p>
-                </div>
-                <div className="box1 ">
-                    <h5>Deferred Task</h5>
-                   <div className="d-flex justify-content-between"> <h5 className="p-2">{Deferred.length}</h5> <h2 className="h2" style={{ background: "rgb(15, 118, 110)"}}>D</h2></div>
-                    <p>110 last month</p>
+    <div
+      className="container-fluid py-5"
+      style={{ backgroundColor: "#1e1e2f", minHeight: "100vh" }}
+    >
+      <h1 className="text-center text-white mb-5">Task Stats</h1>
+
+      <div className="row g-4 justify-content-center">
+        {stats.map((stat, index) => (
+          <div key={index} className="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+            <div
+              className="card h-100 shadow-sm"
+              style={{ maxWidth: "300px", width: "100%" }}
+            >
+              <div className="card-body">
+                <h5 className="card-title text-dark">{stat.title}</h5>
+
+                <div className="d-flex justify-content-between align-items-center mt-3 mb-2">
+                  <h2 className="mb-0 text-dark ps-5">{stat.count}</h2>
+
+                  <div
+                    className="rounded-circle d-flex justify-content-center align-items-center text-white"
+                    style={{
+                      width: "49px",
+                      height: "49px",
+                      backgroundColor: stat.color,
+                      fontWeight: "700",
+                    }}
+                  >
+                    {stat.initial}
+                  </div>
                 </div>
 
-                   
-
-      
+                <p className="text-muted mb-0 small">Compared to last month</p>
+              </div>
             </div>
-            
-            </div>
-  )
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default Task_stats
+export default TaskStats;

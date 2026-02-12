@@ -1,31 +1,76 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { Link } from 'react-router-dom'
 function Login() {
   return (
-    <div>
-      <div className='d-flex m-auto justify-content-center p-4 '>
-        <div className='w-2' style={{width:"40%"}}>
-            <img width={"100%"}  src="https://task-apps-client.vercel.app/assets/Login-XRROANEj.png" alt="" style={{background:"#60a5fa" }} />
-        </div>
-        <div className='w-50 p-3 text-dark w-50 d-flex flex-column gap-5' style={{background:' #bdd6ff'}}>
-            <h2 className='cblue ' style={{fontFamily:"Pacifico"}}>login up</h2>
-                <form className='  '>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control  " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Enter your Email'/>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control " id="exampleInputPassword1" placeholder='Enter your password'/>
-  </div>
- <p>New User? <Link to='/Signin' className="bblue bg-transparent" >Signup</Link></p>
-  <button type="submit" class="btn btn-primary">Login</button>
-</form>
+    <div className="bg-dark text-light vh-100 d-flex align-items-center">
+      <div className="container">
+        <div className="row justify-content-center align-items-center">
+          
+          {/* Left Image Panel */}
+          <div className="col-12 col-md-6 text-center mb-4 mb-md-0">
+            <img
+              src="https://task-apps-client.vercel.app/assets/Login-XRROANEj.png"
+              className="img-fluid"
+              alt="Login Illustration"
+            />
+          </div>
+
+          {/* Right Form Panel */}
+          <div className="col-12 col-md-6">
+            <div className="card bg-secondary shadow-lg">
+              <div className="card-body p-4">
+                <h2 className="text-center cblue" style={{ fontFamily: "Pacifico" }}>
+                  Login
+                </h2>
+
+                <form>
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label text-light">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="email"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+
+                  <div className="mb-3">
+                    <label htmlFor="password" className="form-label text-light">
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="password"
+                      placeholder="Enter your password"
+                    />
+                  </div>
+
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <Link to="/Signin" className="text-info">
+                      New User? Signup
+                    </Link>
+                    <Link to="/Forgot" className="text-info">
+                      Forgot Password?
+                    </Link>
+                  </div>
+
+                  <button type="submit" className="btn btn-primary w-100">
+                    Login
+                  </button>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

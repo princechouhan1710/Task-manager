@@ -6,13 +6,14 @@ function Home() {
       <div className=" m-5 d-flex justify-content-between gap-5 " >
         <div className='w-50  p-5' data-aos="fade-right" data-aos-duration="5000">
         <h1 className='cblue ' style={{fontFamily:"Pacifico" ,
-        }}>Task Manager</h1>
-        <h2 className='cblue'>Simplify Your Workday with Smart Task
-Management.
+        }}>Task Craft</h1>
+       <h2 className="cblue">
+  Plan, Track & Achieve Your Goals Seamlessly
 </h2>
 <p>
-Plan, organize, and execute tasks effortlessly with our intuitive tools—set
-priorities, track progress, and meet deadlines seamlessly.</p>
+  Turn your to‑dos into done — manage tasks, set priorities, and track your progress effortlessly with tools built for focus and productivity.
+</p>
+
 <button className="btn btn-primary">Get Started</button>
       </div>
       <div className='w-50 p-5'  data-aos="fade-left" data-aos-duration="5000">

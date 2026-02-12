@@ -1,33 +1,78 @@
-import React from 'react'
+import React from "react";
 
 function About() {
   return (
-    <div className='text-white p-3 fs-5'>
-       <h1 className='text-center cblue p-2' style={{fontFamily:"Pacifico"}}>About us</h1>
-        <div className='border bblue  rounded-4' data-aos="fade-right" data-aos-duration="10000"  style={{padding:"30px 100px 30px 50px"}} >
-          <p>Welcome to TaskWhiz, your ultimate companion for mastering productivity and organization. In today’s fast-paced world, juggling tasks, deadlines, and priorities can feel
-overwhelming. That’s why we created a task management solution that doesn’t just organize your to-do list but transforms the way you work and live. At TaskWhiz, our
-mission is simple: to empower individuals and teams to achieve more, stress less, and stay focused on what truly matters. Whether it’s personal goals, professional
-projects, or everyday tasks, our app is designed to provide a seamless, intuitive experience that fits effortlessly into your lifestyle.</p>
-<h1 style={{fontFamily:"Pacifico"}}>What We Offer :</h1>
-<p>1.Plan and Organize with Ease: Create tasks, set deadlines, and break down big projects into manageable steps.</p>
-<p>
-2.Track Progress Effortlessly: Stay updated on what’s done and what needs attention with clear visual progress indicators.</p>
-<p>
-3.Collaborate Seamlessly: Work together with your team by assigning tasks, sharing updates, and keeping everyone on the same page.</p>
-<p>
-4.Stay Focused: With features like reminders, notifications, and priority settings, you’ll never lose track of your important tasks.</p>
-<p>
-5.Declutter Your Workspace: Edit, archive, or delete tasks easily to keep your workflow clean and efficient.</p>
-<p>We believe productivity shouldn’t be complicated. Our app simplifies the way you manage tasks, helping you reclaim your time and energy for the things that matter
-most. With a clean interface, customizable options, and tools built for both individuals and teams, TaskWhiz is here to support your journey toward success—one task at a
-time.</p>
-<p>
-Join the thousands of users who trust TaskWhiz to organize their day, achieve their goals, and stay ahead. Let’s simplify your life and transform the way you manage tasks!</p>
+    <div className="bg-dark text-light py-5">
+      <div className="container">
+
+        <h1 className="text-center cblue mb-4" style={{ fontFamily: "Pacifico" }}>
+          About Us
+        </h1>
+
+        <div
+          className="bg-secondary p-4 rounded shadow"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <p className="fs-5">
+            Welcome to <span className="fw-bold">TaskWhiz</span> — your partner in
+            mastering productivity and achieving your goals. In today’s fast-paced world,
+            staying organized shouldn’t be hard. That’s why we built TaskWhiz: a task
+            management tool designed to help you plan, prioritize, and complete your work
+            with clarity and confidence.
+          </p>
+
+          <h3 className="mt-4 cblue">Our Mission</h3>
+          <p className="fs-5">
+            Our mission is simple: to empower individuals and teams to do more with
+            less stress. We believe productivity should be intuitive, flexible, and
+            empowering — whether you’re managing daily tasks, long-term goals, or
+            collaborative projects. A clear mission statement is a key part of an
+            effective “About Us” page because it tells visitors what your brand
+            stands for and how it aligns with their needs. :contentReference
+          </p>
+
+          <h3 className="mt-4 cblue">What We Offer</h3>
+          <ul className="fs-5">
+            <li>
+              <strong>Organize with Ease:</strong> Create, edit, and categorize
+              tasks with intuitive tools and deadline reminders.
+            </li>
+            <li>
+              <strong>Track Progress:</strong> Get clear visual indicators of your
+              progress so you always know what’s done and what’s next.
+            </li>
+            <li>
+              <strong>Stay Focused:</strong> Prioritize what matters most and
+              minimize clutter in your workflow.
+            </li>
+            <li>
+              <strong>Collaborate Effortlessly:</strong> Assign tasks, share
+              updates, and keep your team in sync.
+            </li>
+            <li>
+              <strong>Flexible & Powerful:</strong> Fits your personal or team
+              workflow with customizable settings and smart task features.
+            </li>
+          </ul>
+
+          <p className="fs-5 mt-4">
+            We are committed to creating a productivity experience that helps you
+            work smarter — not harder. Whether you’re an individual user striving
+            for personal goals or a team member managing shared projects, TaskWhiz
+            supports your journey every step of the way.
+          </p>
+
+          <p className="fs-5">
+            Join our community of users who trust TaskWhiz to stay organized,
+            meet deadlines, and achieve meaningful progress — one task at a time.
+          </p>
 
         </div>
+
+      </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

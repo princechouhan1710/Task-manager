@@ -10,11 +10,11 @@ function Contact() {
 assistance, feel free to reach out. Our team is here to help and will get back to you
 as soon as possible. Let’s stay connected!</p>
 <div className='my-3 '>
-<div className='box  bg-primary m-auto border  border-bottom-0' style={{height:"100px" ,width:"75%"}}>
+<div className='box  bg-dark m-auto border  border-bottom-0' style={{height:"100px" ,width:"75%"}}>
     
     </div>
 <div className='d-flex m-auto w-75 justify-content-center border border-top-0 border-bottom-0'>
-    <div className='box  bg-primary ' style={{height:"130px" ,width:"25%"}}>
+    <div className='box  bg-dark ' style={{height:"130px" ,width:"25%"}}>
     
     </div>
     <form className='border p-5 w-100  '>
@@ -49,9 +49,9 @@ as soon as possible. Let’s stay connected!</p>
     
   
   </div>
-  <button type="submit" class="btn btn-primary px-3 my-2 w-100 m">Submit</button>
+  <button type="submit" class="btn btn-dark px-3 my-2 w-100 m">Submit</button>
 </form>
-<div className='box  bg-primary ' style={{height:"130px" ,width:"25%"}}>
+<div className='box  bg-dark ' style={{height:"130px" ,width:"25%"}}>
     
     </div>
    

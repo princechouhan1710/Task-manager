@@ -1,19 +1,35 @@
-import React from 'react'
-import Sidebar from '..//layout/Sidebar'
-import { Outlet,NavLink } from 'react-router-dom'
-function TDashboard() {
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Sidebar from "../layout/Sidebar";
+
+function Layout() {
   return (
-    <div>
-          <div className='  d-flex justify-content-start vh-100 '>
-            <div className="h-100 w-25">
-     <Sidebar/>
+    <div className="d-flex vh-100">
+
+      {/* Sidebar */}
+      <div
+        className="h-100"
+        style={{
+          width: "20%",
+          minWidth: "220px",
+          marginRight: "1rem", // adds gap between sidebar and main
+        }}
+      >
+        <Sidebar />
       </div>
-        <div className="main d-flex w-75  justify-content-center  " style={{  minHeight:"100vh"}}>
-        <Outlet/>
+
+      {/* Main content */}
+      <div
+        className="flex-grow-1 p-4 shadow overflow-auto rounded"
+        style={{
+          minHeight: "100vh",
+          backgroundColor: "#1e1e2f",
+        }}
+      >
+        <Outlet />
       </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default TDashboard
+export default Layout;
